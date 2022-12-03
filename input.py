@@ -1,5 +1,6 @@
 class Imports:
-    def getInput(self, path):
+    @staticmethod
+    def get_input(path):
         f = open(path, "r")
         rules = []
         for x in f:

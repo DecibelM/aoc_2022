@@ -1,29 +1,26 @@
-from input import Imports
-
-importClass = Imports()
-
-
 class Day1:
     @staticmethod
-    def task_1():
-        data = importClass.getInput("input/input_1.txt")
-        counter = 0
-        for i in range(1, len(data)):
-            previous = int(data[i - 1])
-            current = int(data[i])
-            if current > previous:
-                counter += 1
-
-        print("Part 1:" + counter)
+    def task_1(inp):
+        calories = 0
+        highest = 0
+        for item in inp:
+            if item != "":
+                calories += int(item)
+            else:
+                if calories > highest:
+                    highest = calories
+                calories = 0
+        return highest
 
     @staticmethod
-    def task_2():
-        data = importClass.getInput("input/input_1.txt")
-        counter = 0
-        for i in range(3, len(data)):
-            sumA = int(data[i - 3]) + int(data[i - 2]) + int(data[i - 1])
-            sumB = int(data[i - 2]) + int(data[i - 1]) + int(data[i])
-            if sumB > sumA:
-                counter += 1
-
-        print("Part 1:" + counter)
+    def task_2(inp):
+        calories = 0
+        calories_list = []
+        for item in inp:
+            if item != "":
+                calories += int(item)
+            else:
+                calories_list.append(calories)
+                calories = 0
+        calories_list.sort(reverse=True)
+        return calories_list[0] + calories_list[1] + calories_list[2]
