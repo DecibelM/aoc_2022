@@ -7,7 +7,16 @@ class Imports:
             rules.append(x.strip())
         return rules
 
-    def get_input_chunk(self, path):
+    @staticmethod
+    def get_input_no_strip(path):
+        f = open(path, "r")
+        rules = []
+        for x in f:
+            rules.append(x)
+        return rules
+
+    @staticmethod
+    def get_input_chunk(path):
         f = open(path, "r")
         data = f.read()
         fixed_data = data.split("\n\n")
