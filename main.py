@@ -3,6 +3,7 @@ from Day2 import Day2
 from Day3 import Day3
 from Day4 import Day4
 from Day5 import Day5
+from Day6 import Day6
 from input import Imports
 
 importClass = Imports()
@@ -27,8 +28,13 @@ print(Day3.task2(inp))
 print("Day 4: ")
 inp = Imports.get_input("input/input4.txt")
 print(Day4.task_1(inp))
-"""
+
 print("Day 5: ")
 inp = Imports.get_input_no_strip("input/input5.txt")
 print(Day5.task_1(inp, 1))
 print(Day5.task_1(inp, 2))
+"""
+print("Day 6: ")
+inp = Imports.get_input_chunk("input/input6.txt")
+print(Day6.task_1(inp))
+# print(Day6.task_1(inp))
