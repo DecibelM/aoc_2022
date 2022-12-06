@@ -1,14 +1,10 @@
 class Day6:
     @staticmethod
-    def task_1(inp):
-
+    def task_1(inp, characters):
         i = 0
         inp = inp[0]
-        characters = 14
         while i < len(inp):
-            current = []
-            for j in range(i, i + characters):
-                current.append(inp[j])
+            current = inp[i: i + characters]
             is_unique = True
             for item in current:
                 if current.count(item) > 1:

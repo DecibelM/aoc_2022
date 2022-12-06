@@ -36,5 +36,5 @@ print(Day5.task_1(inp, 2))
 """
 print("Day 6: ")
 inp = Imports.get_input_chunk("input/input6.txt")
-print(Day6.task_1(inp))
-# print(Day6.task_1(inp))
+print(Day6.task_1(inp, 4))
+print(Day6.task_1(inp, 14))
